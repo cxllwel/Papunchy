@@ -1,0 +1,122 @@
+h1 {
+  color: #5757ff;
+}
+body {
+  font-family: "Itim", cursive;
+  color: #000000;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #E6D1F2; /* Set the background color for the body */
+}
+
+.heart-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1
+}
+
+.heart {
+  font-size: 8em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.heartbeat {
+  position: relative;
+  z-index: 1;
+  animation: beat 2s linear infinite;
+}
+
+.heartecho {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: echo 2s linear infinite;
+}
+
+@keyframes beat {
+  0% {
+    transform: scale(1);
+  }
+  14% {
+    transform: scale(0.9);
+  }
+  21% {
+    transform: scale(1.1) skew(0.004turn);
+  }
+  28% {
+    transform: scale(1) skew(0.008turn);
+  }
+  35% {
+    transform: scale(1) skew(0);
+  }
+}
+
+@keyframes echo {
+  0% {
+    opacity: 0.5;
+    transform: scale(1);
+  }
+  14% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  21% {
+    opacity: 0.4;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(3);
+  }
+}
+
+.surprise-container {
+  position: relative;
+  display: inline-block;
+}
+
+.surprise-img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 1s ease;
+}
+
+.surprise-img:hover {
+  transform: rotate(360deg);
+}
+
+.hidden-paragraph {
+  margin-top: 20px;
+  display: none; /* Initially hidden */
+}
+
+.button {
+  background-color: #ffd280;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-family: "Itim", cursive;
+  margin: 4px 2px;
+  transition-duration: 1s;
+  cursor: pointer;
+  border-radius: 12px;
+}
+
+.button:hover {
+  background-color: #f7d4bc;
+}
+/* old style */
